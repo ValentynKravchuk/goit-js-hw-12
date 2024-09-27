@@ -6,13 +6,133 @@
 */
 /* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input[type='text'] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  width: 272px;
+  margin-right: 10px;
+  outline: none;
+  color: transparent;
+}
+.search-form input[type='text']:hover {
+  border-color: #000;
+}
+.search-form input[type='text']:focus {
+  border-color: #4e75ff;
+}
+
+.search-form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+.loader {
+  display: none;
+  margin: 20px auto;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+  transition: 250ms linear;
+}
+.gallery-item:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.photo-card {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  background-color: #11e045;
+}
+
+.info-item {
+  margin: 0;
+  padding: 4px 0;
+}
+
+.info-item b {
+  color: #e70a0a;
+}
+
+.load-more {
+  display: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+}
+.load-more:hover,
+.load-more:focus {
+  background-color: #0056b3;
+}
