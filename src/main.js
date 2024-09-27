@@ -18,9 +18,9 @@ loadMoreButton.addEventListener('click', loadMoreImages);
 
 async function onFormSubmit(event) {
   event.preventDefault();
-  gallery.innerHTML = ''; // Очищуємо галерею перед новим запитом
+  gallery.innerHTML = ''; 
   query = event.target.elements['search-query'].value.trim();
-  currentPage = 1; // Скидаємо номер сторінки
+  currentPage = 1; 
 
   if (query === '') {
     iziToast.error({
